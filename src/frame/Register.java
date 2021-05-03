@@ -113,7 +113,7 @@ public class Register extends javax.swing.JFrame {
         jLabel6.setText("Ketik Ulang Password");
 
         jButton_Register.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
-        jButton_Register.setText("GAS DAFTAR !!");
+        jButton_Register.setText("DAFTAR SEKARANG");
         jButton_Register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_RegisterActionPerformed(evt);

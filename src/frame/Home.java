@@ -160,11 +160,12 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BackActionPerformed
         // TODO add your handling code here:
-            Login lg = new Login();
-            lg.setVisible(true);
-            lg.pack();
-            lg.setLocationRelativeTo(null);
-            lg.setDefaultCloseOperation(Register.EXIT_OR_CLOSE);
+        setVisible(false);
+        Login lg = new Login();
+        lg.setVisible(true);
+        lg.pack();
+        lg.setLocationRelativeTo(null);
+        lg.setDefaultCloseOperation(Register.EXIT_OR_CLOSE);
     }//GEN-LAST:event_jButton_BackActionPerformed
 
     /**
