@@ -12,6 +12,8 @@ import Systems.Connect;
  * @author User
  */
 public class Home extends javax.swing.JFrame {
+    
+    private static int EXIT_OR_CLOSE;
 
     /**
      * Creates new form Home
@@ -167,7 +169,7 @@ public class Home extends javax.swing.JFrame {
         lg.setVisible(true);
         lg.pack();
         lg.setLocationRelativeTo(null);
-        lg.setDefaultCloseOperation(Register.EXIT_OR_CLOSE);
+        lg.setDefaultCloseOperation(Home.EXIT_OR_CLOSE);
     }//GEN-LAST:event_jButton_BackActionPerformed
 
     /**
