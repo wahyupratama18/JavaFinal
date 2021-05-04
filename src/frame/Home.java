@@ -5,6 +5,8 @@
  */
 package frame;
 
+import Systems.Connect;
+
 /**
  *
  * @author User
@@ -16,7 +18,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
-        jLabel1.setText(Register.nama + "!");
+        jLabel1.setText(Connect.getUser() + "!");
     }
 
     /**
