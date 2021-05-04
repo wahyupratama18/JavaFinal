@@ -183,17 +183,15 @@ public class Login extends javax.swing.JFrame {
     private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LoginActionPerformed
         // TODO add your handling code here:
         int id = Integer.parseInt(jTextField1.getText());
-        if(id > 0) {
-            Connect login = new Connect();
-            if(login.setLogin(id)) {
-                setVisible(false);
-                Home hm = new Home();
-                hm.setVisible(true);
-                hm.pack();
-                hm.setLocationRelativeTo(null);
-                hm.setDefaultCloseOperation(Login.EXIT_OR_CLOSE);
-            }
-        } else JOptionPane.showMessageDialog(null, "Username belum terisi");
+        Connect login = new Connect();
+        if(login.setLogin(id)) {
+            setVisible(false);
+            Home hm = new Home();
+            hm.setVisible(true);
+            hm.pack();
+            hm.setLocationRelativeTo(null);
+            hm.setDefaultCloseOperation(Login.EXIT_OR_CLOSE);
+        }
         
     }//GEN-LAST:event_jButton_LoginActionPerformed
 

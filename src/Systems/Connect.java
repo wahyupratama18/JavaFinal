@@ -20,12 +20,18 @@ public class Connect extends User {
     }
     
     @Override
-    public boolean setLogin(int id){
-        if (users.length < id){
-            JOptionPane.showMessageDialog(null, "Karyawan tidak tersedia");
+    public boolean setLogin(int loggedIn){
+        try{
+            --loggedIn;
+            String tryLogin = users[loggedIn];
+            this.loggedIn = loggedIn;
+            return true;
+        } catch(ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null, "ID Karyawan yang dimasukkan tidak tersedia");
+            return false;
+        } catch(NegativeArraySizeException e) {
+            JOptionPane.showMessageDialog(null, "Anda memasukkan ID negatif");
             return false;
         }
-        loggedIn = --id;
-        return true;
     }
 }
