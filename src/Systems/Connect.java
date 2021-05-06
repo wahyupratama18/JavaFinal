@@ -14,18 +14,41 @@ import javax.swing.JOptionPane;
  */
 public class Connect extends User {
     
-    @Override
-    public int getLogin(){
-        return loggedIn;
+    /**
+     *
+     * @return
+     */
+    public int getCurrentUser(){
+        return super.loggedIn;
     }
     
+    /**
+     *
+     * @param input
+     * @return
+     */
     @Override
     public boolean setLogin(String input){
         try{
             int loggedIn = Integer.parseInt(input);
-            --loggedIn;
-            String tryLogin = users[loggedIn];
-            this.loggedIn = loggedIn;
+            return this.setLogin(loggedIn);
+        } catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Hanya dapat menerima masukan angka");
+            return false;
+        }
+    }
+    
+    /**
+     *
+     * @param input
+     * @return
+     */
+    @Override
+    public boolean setLogin(int input){
+        try{
+            --input;
+            String tryLogin = users[input];
+            loggedIn = input;
             return true;
         } catch(NumberFormatException e){
             JOptionPane.showMessageDialog(null, "Hanya dapat menerima masukan angka");
