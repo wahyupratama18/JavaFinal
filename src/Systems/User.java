@@ -18,7 +18,7 @@ abstract class User {
     public static String getUser(){
         return users[loggedIn];
     }
-    public abstract boolean setLogin(int id);
+    public abstract boolean setLogin(String id);
     
     
 }

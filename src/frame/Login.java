@@ -182,11 +182,10 @@ public class Login extends javax.swing.JFrame {
     
     private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LoginActionPerformed
         // TODO add your handling code here:
-        int id = Integer.parseInt(jTextField1.getText());
         Connect login = new Connect();
-        if(login.setLogin(id)) {
+        if(login.setLogin(jTextField1.getText())) {
             setVisible(false);
-            Home hm = new Home();
+            Dashboard hm = new Dashboard();
             hm.setVisible(true);
             hm.pack();
             hm.setLocationRelativeTo(null);
