@@ -28,6 +28,7 @@ public class Dashboard extends javax.swing.JFrame {
         
         jLabel10.setText("Welcome, " + Connect.getUser());
         press = new Presensi();
+        setRemarks();
         
         //Border panelBorder = BorderFactory.createMatteBorder(0, 0, 2,0 , color.white);
         //jPanel_breaker.setBorder(panelBorder);
@@ -292,24 +293,23 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel11)
                             .addComponent(jLabel12)))
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
                             .addComponent(jLabel7))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(25, 25, 25)
-                    .addComponent(jLabel5)
-                    .addContainerGap(344, Short.MAX_VALUE)))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel8)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -323,11 +323,6 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(jLabel15))
                 .addContainerGap(28, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(68, 68, 68)
-                    .addComponent(jLabel5)
-                    .addContainerGap(110, Short.MAX_VALUE)))
         );
 
         jLabel_Close.setFont(new java.awt.Font("Tw Cen MT", 1, 20));

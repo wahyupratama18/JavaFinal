@@ -50,15 +50,12 @@ public class Connect extends User {
             String tryLogin = users[input];
             loggedIn = input;
             return true;
-        } catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Hanya dapat menerima masukan angka");
-            return false;
-        } catch(ArrayIndexOutOfBoundsException e){
-            JOptionPane.showMessageDialog(null, "ID Karyawan yang dimasukkan tidak tersedia");
-            return false;
         } catch(NegativeArraySizeException e) {
             JOptionPane.showMessageDialog(null, "Anda memasukkan ID negatif");
             return false;
-        }
+        }catch(ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null, "ID Karyawan yang dimasukkan tidak tersedia");
+            return false;
+        } 
     }
 }
